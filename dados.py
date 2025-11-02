@@ -163,7 +163,7 @@ def enriquecer_combates_com_nomes(combates: pd.DataFrame, pokemons_df: pd.DataFr
 
     # 3) Cópia dos combates e normalização de tipos
     df = combates.copy()
-    # nomes das colunas que você disse que o endpoint retorna
+    # nomes das colunas que o endpoint retorna
     id_cols = {
         "first_pokemon": "first_pokemon_name",
         "second_pokemon": "second_pokemon_name",
@@ -193,7 +193,7 @@ def enriquecer_combates_com_nomes(combates: pd.DataFrame, pokemons_df: pd.DataFr
         total = len(df)
         print(f"Coluna '{newcol}': {total - n_missing}/{total} nomes preenchidos, {n_missing} faltando.")
 
-    # mostra alguns IDs que não foram encontrados (útil para baixar atributos)
+    # mostra alguns IDs que não foram encontrados
     for idcol, namecol in id_cols.items():
         missing_ids = df.loc[df[namecol].isna(), idcol].dropna().unique()
         if len(missing_ids):
@@ -267,7 +267,7 @@ if __name__ == "__main__":
         raise SystemExit("Não foi possível autenticar.")
     buscar_health(BASE_URL, token)
 
-    # 1) Traz lista de pokémons (id, name) — barato e evita N requisições
+    # 1) Traz lista de pokémons (id, name) — Evita N requisições
     df_pokemons = listar_pokemons(BASE_URL, token, per_page=50, throttle_s=0.12)
 
     # 2) Traz todos os combates

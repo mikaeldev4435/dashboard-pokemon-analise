@@ -168,7 +168,7 @@ def analisar_proporcao_lendarios():
     legendary_map = {'true': 'Lendário', 'false': 'Não Lendário',
                      True: 'Lendário', False: 'Não Lendário'}
 
-    # Mapeia, preenche NaNs (se houver) como 'Não Lendário' e conta
+    # Mapeia preenche NaNs se houver como 'Não Lendário' e conta
     contagem = df_atributos['legendary'].map(legendary_map).fillna('Não Lendário').value_counts()
     df_proporcao = contagem.reset_index()
     df_proporcao.columns = ['Categoria', 'Contagem']
@@ -321,7 +321,7 @@ fig_pie_lendarios.update_traces(textinfo='percent+label', pull=[0, 0.1])  # Dest
 st.plotly_chart(fig_pie_lendarios, use_container_width=True)
 
 # --- Seção 6: Lendários vencem mais? ---
-st.header("Análise 6: Pokémons Lendários Vencem Mais?")
+st.header("Análise 6: Porcentagem de Vitórias Pokémons Lendários")
 
 df_vitorias_lendarios = analisar_vitorias_lendarios()
 
