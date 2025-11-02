@@ -15,25 +15,19 @@ Este projeto é um dashboard interativo construído com Streamlit, Pandas e Plot
 
 Para executar este dashboard localmente, siga os passos abaixo:
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/seu-nome-de-usuario/dashboard-pokemon-streamlit.git](https://github.com/seu-nome-de-usuario/dashboard-pokemon-streamlit.git)
-    cd dashboard-pokemon-streamlit
-    ```
-
-2.  **Crie um ambiente virtual (Recomendado):**
+1.  **Crie um ambiente virtual (Recomendado):**
     ```bash
     python -m venv .venv
     # No Windows
     .\.venv\Scripts\activate
     ```
 
-3.  **Instale as dependências:**
+2.  **Instale as dependências:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Execute o aplicativo Streamlit:**
+3.  **Execute o aplicativo Streamlit:**
     ```bash
     streamlit run app.py
     ```
