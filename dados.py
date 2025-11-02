@@ -10,7 +10,7 @@ from typing import Optional, Dict, Any, List, Iterable
 BASE_URL = "http://ec2-52-67-119-247.sa-east-1.compute.amazonaws.com:8000"
 CREDENCIAIS = {
     "username": os.getenv("API_USER", "kaizen-poke"),
-    "password": os.getenv("API_PASS", "4w9f@D39fkkO"),
+    "password": os.getenv("API_PASS", ""), #coloque a senha entre as aspas 
 }
 
 SESSION = requests.Session()
