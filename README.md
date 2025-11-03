@@ -25,7 +25,9 @@ Para executar este dashboard localmente, siga os passos abaixo:
 2.  **Instale as dependências:**
     ```bash
     pip install -r requirements.txt
+    
     ```
+3. **Coloque a senha no dicionário CREDENCIAIS no script dados.py**
 
 3.  **Execute o aplicativo Streamlit:**
     ```bash
